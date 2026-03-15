@@ -2,7 +2,7 @@
 CS 175 Project - Mechanistic Interpretability
 
 Libraries used: 
-    - numpy
+- numpy
     - pandas
     - matplotlib
     - seaborn
@@ -19,7 +19,7 @@ Libraries used:
     - google.colab (drive, userdata)
 
 Publicly available codes used:
-  - None (we used publicly available libraries/APIs, but wrote the project code ourselves).
+N/A(we used publicly available libraries/APIs, but wrote the project code ourselves).
 
 Scripts/functions written by our team:
 - setup_colab.ipynb (~56 lines)
