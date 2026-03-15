@@ -3,20 +3,20 @@ CS 175 Project - Mechanistic Interpretability
 
 Libraries used: 
 - numpy
-    - pandas
-    - matplotlib
-    - seaborn
-    - tqdm / tqdm.asyncio
-    - requests
-    - scikit-learn (sklearn.metrics)
-    - datasets (Hugging Face Datasets)
-    - transformers (Hugging Face Transformers)
-    - huggingface_hub
-    - torch / torchvision / torchaudio
-    - transformer_lens
-    - sae_lens
-    - openai (OpenAI API client)
-    - google.colab (drive, userdata)
+- pandas
+- matplotlib
+- seaborn
+- tqdm / tqdm.asyncio
+- requests
+- scikit-learn (sklearn.metrics)
+- datasets (Hugging Face Datasets)
+- transformers (Hugging Face Transformers)
+- huggingface_hub
+- torch / torchvision / torchaudio
+- transformer_lens
+- sae_lens
+- openai (OpenAI API client)
+- google.colab (drive, userdata)
 
 Publicly available codes used:
 N/A(we used publicly available libraries/APIs, but wrote the project code ourselves).
