@@ -23,25 +23,20 @@ Publicly available codes used:
 
 Scripts/functions written by our team:
 - setup_colab.ipynb (~56 lines)
-        Sets up the Colab environment (auth tokens), logs into Hugging Face, and loads the Gemma model/tokenizer.
+        Tests colab environment, hugging face, and loads gemma model. Week 1 testing.
 - sentiment_features.ipynb (~260 lines)
-        Sentiment feature discovery pipeline: queries Neuronpedia/Gemma-Scope features using seed prompts,
-        evaluates candidate SAE features on a sentiment dataset using AUC (roc_auc_score),
-        and ranks/selects top sentiment-related features.
-- sentiment_evaluation.ipynb (~580 lines)
-        Evaluates sentiment effects (e.g., relative sentiment/reconstruction analyses) using model outputs,
-        OpenAI API calls for scoring/labeling (if applicable), and visualization of results.
+        Script for finding sentiment-related feature. It sends polarized seed prompts to Neruonpedia to see what activates, evaluates the candidate SAE features using AUC, and ranks the best ones for our sentiment steering.        and ranks/selects top sentiment-related features.
 - IMDB_prefix.ipynb (~243 lines)
-        Builds/constructs IMDB dataset prefixes (e.g., prompt/prefix generation and formatting),
-        including dataset download/processing and optional transformer pipeline usage.
+        Script to prepare the IMDB dataset. We used it to download the preprocess the movie reviews to generate the neutral prefixes that we needed for the sentiment steering experiments.
  - truthfulness_features.ipynb (~785 lines)
-        Truthfulness feature discovery pipeline: constructs prompt sets (myth/fact/unanswerable),
-        queries Neuronpedia for activated SAE features, aggregates statistics, and ranks candidates
-        for truthfulness-related behavior.
-- truthfulness_evaluation.ipynb (~408 lines)
-        Runs truthfulness evaluation using selected features/prompts, performs scoring and plotting,
-        and summarizes evaluation metrics and outcomes.
+        Pipeline for finding truthfulness features. Constructs set of myth, fact, and unanswerable prompts, pulls activated features from Neuronpedia, and calculates stats to find features that control factual behavior.
 - steer.ipynb (~134 lines)
-        Implements feature steering workflow using SAE Lens + TransformerLens (hooks/SAE loading),
-        Plus inference utilities for testing steering effects on model generations.
+        Core logic for model steering and mechanistic intervention. Uses SAE Lens and TransformerLens to load the autoencoders and inject our chosen feature vectors into the model. Used primarily prior to intermediate report for intial findings and testing.
+- cs175_final_runs.ipynb (~480 lines)
+        Notebook for all final full generations and experiment runs. Uses the same logic as in steer.ipynb, saves output for use in evaluation. Also includes the script we used for evaluating feature entanglement and calculating experiment sample size.
+- sentiment_evaluation.ipynb (~580 lines)
+        Evaluates output for sentiment steering sweep and subsequent experiments. Uses LLM-as-a-Judge to score generated texts, analyzes relative sentiment and coherence, and creates visualizations for report.
+        OpenAI API calls for scoring/labeling (if applicable), and visualization of results.
+- truthfulness_evaluation.ipynb (~408 lines)
+        Evaluates output from the truthfulness steering sweep. Uses a different pipline to score the model's responses, calculate final metrics, and generate plots for our report.
 
